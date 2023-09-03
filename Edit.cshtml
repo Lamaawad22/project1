@@ -1,0 +1,24 @@
+﻿@model Products1
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edit Page";
+}
+
+<h1>تعديل بيانات المنتج</h1>
+
+<form method="post" asp-action="UpdateProducts">
+    <input type="hidden" asp-for="@Model.Id" />
+    <div class="row">
+        <div class="col-sm-12">
+            <label for="ProductName">اسم المنتج</label>
+            <input type="text" asp-for="@Model.ProductName" name="ProductName" id="ProductName" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 mt-2 d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary"> حفظ </button>
+        </div>
+    </div>
+</form>
